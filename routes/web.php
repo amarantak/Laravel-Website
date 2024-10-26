@@ -24,10 +24,12 @@ use App\Http\Controllers\PagesController;
 //     return 'This is user ' . $name . ' with an id: ' . $id;
 // });
 
+// Route::get('/about', function () {
+//     return view('pages.about');   
+// });
 
 Route::get('/', [PagesController::class, 'index']);
 
-Route::get('/about', function () {
-    return view('pages.about');
-    // return 'Hello World';
-});
+Route::get('/about', [PagesController::class, 'about']);
+
+Route::get('/services', [PagesController::class, 'services']);
