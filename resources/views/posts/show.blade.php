@@ -8,7 +8,7 @@
         {!! $post->body !!} <!-- Use with caution, ensure content is sanitized -->
     </div>
     <hr>
-    <small>Written on {{ $post->created_at->format('M d, Y') }}</small>
+    <small>Written on {{ $post->created_at->format('M d, Y') }} by {{$post->user->name}}</small>
     <hr>
     <div class="btn-group" role="group" aria-label="Post Actions" style="left: right;">
         <div>
