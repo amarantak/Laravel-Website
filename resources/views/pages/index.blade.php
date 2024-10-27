@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{config('app.name','Todo App')}}</title>
-</head>
-
-<body>
-    <h1>Welcome to Laravel</h1>
-    <p>This is the Something</p>
-</body>
-
-</html>
+@section('content')
+    <div class="jumbotron text-center">
+        <h1>Welcome To Laravel!</h1>
+        <p>This is the laravel application from the "Laravel From Scratch" YouTube series</p>
+        <p><a class="btn btn-primary btn-lg" href="/login" role="button">Login</a> <a class="btn btn-success btn-lg" href="/register" role="button">Register</a></p>
+    </div>
+@endsection

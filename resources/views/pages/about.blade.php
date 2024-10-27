@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{config('app.name','Todo App')}}</title>
-</head>
-
-<body>
-    <h1>About Page</h1>
+@section('content')
+    <h1>Welcome to Laravel</h1>
     <p>This is the Something</p>
-</body>
-
-</html>
+@endsection('content')
