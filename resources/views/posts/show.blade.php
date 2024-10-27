@@ -1,11 +1,11 @@
-@extends('layouts.app');
+@extends('layouts.app')
 
 @section('content')
-    <h1>{{$post->title}}</h1>  
-    <a href="/posts" class="btn- btn-default">Go Back</a>
+    <h1>{{ $post->title }}</h1>  
+    <a href="{{ url('/posts') }}" class="btn btn-default">Go Back</a> <!-- Fixed class name and used url helper -->
     <div>
-        {{$post->body}}
+        {!! $post->body !!} <!-- Use with caution, ensure content is sanitized -->
     </div>
     <hr>
-    <small>Written on {{$post->created_at}}</small>
+    <small>Written on {{ $post->created_at->format('M d, Y') }}</small> <!-- Formatted date for better readability -->
 @endsection

@@ -1,5 +1,3 @@
-{{-- resources/views/layouts/app.blade.php --}}
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -14,8 +12,14 @@
 <body>
     @include('inc.navbar')
     <div class="container">
+        @include('inc.messages')
         @yield('content')
     </div>
-   
+</script>
+{{-- Include CKEditor Script Here --}}
+<script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('article-ckeditor'); // Ensure this matches the textarea id
+</script>
 </body>
 </html>
