@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card border-0">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
@@ -40,28 +40,35 @@
                         </div>
 
                         <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
+                            <div class="col-md-4 mx-auto">
+                                <div class="row" style="width:25vw;">
+                                    <div class="col-6 text-start">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+        
+                                            <label class="form-check-label custom-fs-6" for="remember">
+                                                {{ __('Remember Me') }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 text-end bg-light">
+                                        @if (Route::has('password.request'))
+                                        <a class=" fw-bold text-decoration-none custom-fs-6"  href="{{ route('password.request') }}">
+                                            {{ __('Forgot password?') }}
+                                        </a>
+                                    @endif
+                                    </div>
                                 </div>
-                            </div>
+                            </div>                            
                         </div>
 
                         <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                            <div class="col-md-8 offset-md-4">                           
+                                <button type="submit" class="btn mx-auto btn-dark" style="width:23vw;">
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+                                
                             </div>
                         </div>
                     </form>
