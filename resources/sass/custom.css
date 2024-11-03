@@ -1,3 +1,58 @@
-body{
-    /* background-color: blue; */
+* {margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif !important;  
+
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);   
+   
+}
+
+h1{
+    font-size: 4rem;
+}
+
+navbar-nav  a{
+font-weight: 700;
+}
+
+/* Homepage cards*/
+
+/* Overlay transition */
+.overlay-transition {
+    transition: height 0.3s ease, background-color 0.3s ease;
+    height: 25%; /* Initially at bottom 25% */
+    bottom: 0;
+    text-decoration: none; /* Remove underline on the link */
+}
+
+/* Hover effect to expand overlay */
+.card:hover .overlay-transition {
+    height: 100% !important; /* Expand to full height on hover */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
+    align-items: center !important; /* Center content vertically */
+}
+
+/* Change text color when overlay is active */
+.card:hover .overlay-transition h5,
+.card:hover .overlay-transition p { 
+    color: blue !important;
+}
+
+a:hover{
+    color: blue !important;
+}
+
+.btn-custom{    
+    background-color: #aa9948;
+}
+
+  

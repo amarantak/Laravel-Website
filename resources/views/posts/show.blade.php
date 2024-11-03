@@ -2,10 +2,11 @@
 @extends('layouts.app')
 
 @section('content')   
-    <a href="{{ url('/posts') }}" class="btn btn-default">Go Back</a>
+    <a href="{{ url('/posts') }}" class="btn btn-default"><i class="fa-solid fa-arrow-left-long"></i>&nbsp;Go Back</a>
     <br><br>
     <h1>{{ $post->title }}</h1>
     <img class="card-img-top img-fluid rounded" src="/storage/cover_images/{{$post->cover_image}}" alt="Card Image" style="height: 300px; object-fit: cover;">
+    <br><br>
     <div>
         {!! $post->body !!} <!-- Use with caution, ensure content is sanitized -->
     </div>
