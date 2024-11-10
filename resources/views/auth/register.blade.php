@@ -63,7 +63,7 @@
 
                         <div class="row mb-3">
                             <div class="col-md-4 mx-auto">
-                                <button type="submit" class="btn btn-dark" style="width:23vw;">
+                                <button type="submit" class="btn btn-dark" style="width:19.2vw;">
                                     {{ __('Register') }}
                                 </button>
                             </div>

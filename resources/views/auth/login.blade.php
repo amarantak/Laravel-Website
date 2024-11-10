@@ -41,7 +41,7 @@
 
                         <div class="row mb-3">
                             <div class="col-md-4 mx-auto">
-                                <div class="row" style="width:25vw;">
+                                <div class="row" style="width:20vw;">
                                     <div class="col-6 text-start">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -64,11 +64,9 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">                           
-                                <button type="submit" class="btn mx-auto btn-dark" style="width:23vw;">
+                                <button type="submit" class="btn mx-auto btn-dark" style="width:19.2vw;">
                                     {{ __('Login') }}
                                 </button>
-
-                                
                             </div>
                         </div>
                     </form>
